@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js"
+            data-appid="101459253" data-redirecturi="http://passport.seei.tv:8080/auth/qq/callback" charset="utf-8"></script>
+</head>
+<body>
+测试
+<span id="qqLoginBtn"></span><br/>
+
+-------------
+<img src="qq_logo.png" onclick="toLogin()" />
+
+<a href="https://graph.qq.com/oauth2.0/authorize?response_type=code&amp;client_id=101459253&amp;redirect_uri=http%3a%2f%2fpassport.seei.tv%3a8080%2fauth%2fqq%2fcallback&amp;scope=get_user_info&amp;state=state" target="_blank">测试登录</a>
+
+</body>
+<script type="text/javascript">
+    QC.Login({
+        btnId:"qqLoginBtn"    //插入按钮的节点id
+    });
+    function toLogin(){
+        var appid = "101459253";
+        var appkey = "eb59f792f7c33a3fa4366cdbd3fb8ceb";
+        var redirect_uri = encodeURIComponent("http://passport.seei.tv:8080/auth/qq/callback");
+        var scope = "get_user_info";
+
+        /*<![CDATA[*/
+        var url = "https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101459253&redirect_uri="+redirect_uri+"&scope=get_user_info&state=test";
+        /*]]>*/
+        window.open(url,"TencentLogin",
+            "width=750,height=520,menubar=0,scrollbars=1,resizable=1,status=1,titlebar=0,toolbar=0,location=1");
+        // window.location.href = url;
+        // $.ajax({
+        //     type:"get",
+        //     url: "http://www.baidu.com",
+        //     success:function(flag){
+        //         console.log('success')
+        //     }
+        // })
+    }
+</script>
+</html>

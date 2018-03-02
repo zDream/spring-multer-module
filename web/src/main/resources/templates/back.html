@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+测试
+<p th:text="'Hello！, ' + ${code} + '!'" >3333</p>
+<p th:text="'Hello！, ' + ${state} + '!'" >3333</p>
+-------------
+
+</body>
+<script  th:inline="javascript">
+
+    console.log('11')
+    // var data = {
+    //     grant_type :"authorization_code",
+    //     client_id : "101459253",
+    //     client_secret : "eb59f792f7c33a3fa4366cdbd3fb8ceb",
+    //     code : [[${code}]],
+    //     redirect_uri : "http://passport.seei.tv:8080/auth/qq/callback"
+    // }
+    console.log('22')
+    function callbackparam(data){
+        console.log('successsss')
+    }
+    // $.ajax({
+    //     type: 'get',
+    //     url: "https://graph.qq.com/oauth2.0/token",
+    //     data: {
+    //         grant_type :"authorization_code",
+    //         client_id : "101459253",
+    //         client_secret : "eb59f792f7c33a3fa4366cdbd3fb8ceb",
+    //         code : [[${code}]],
+    //         redirect_uri : "http://passport.seei.tv:8080/auth/qq/callback"
+    //     },
+    //     cache: false,
+    //     async: true,
+    //     dataType: 'jsonp',
+    //     jsonp:"callbackparam",//约定回调函数的参数名
+    //     success: function (data) {
+    //         console.log("data = "+data)
+    //     }
+    // });
+    console.log('33')
+</script>
+</html>
