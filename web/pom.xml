@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <artifactId>manage</artifactId>
+        <artifactId>spring-multi-module</artifactId>
         <groupId>com.drayy</groupId>
         <version>1.0.0</version>
     </parent>
