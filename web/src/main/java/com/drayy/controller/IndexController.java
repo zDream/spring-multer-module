@@ -70,13 +70,12 @@ public class IndexController {
 //                "client_id={client_id}&client_secret={client_secret}&code={code}&redirect_uri={redirect_uri}", String.class, map);
 //        //forObject = access_token=ED414A77C09F03EF82CED4AB70A91A83&expires_in=7776000&refresh_token=BDBB2042F46BA3862C159AFAFF4C2B63
 
-        String forObject = restTemplate.getForObject("https://graph.qq.com/oauth2.0/token?grant_type={grant_type}&" +
-                "client_id={client_id}&client_secret={client_secret}&code={code}&redirect_uri={redirect_uri}", String.class, map);
+//        String forObject = restTemplate.getForObject("https://graph.qq.com/oauth2.0/token?grant_type={grant_type}&" +
+//                "client_id={client_id}&client_secret={client_secret}&code={code}&redirect_uri={redirect_uri}", String.class, map);
+//
+//        System.out.println();
 
 
-        System.out.println();
-
-        /**
         String forObject = restTemplate.getForObject("https://graph.qq.com/oauth2.0/token?grant_type={grant_type}&" +
                 "client_id={client_id}&client_secret={client_secret}&code={code}&redirect_uri={redirect_uri}", String.class, map);
         //forObject = access_token=ED414A77C09F03EF82CED4AB70A91A83&expires_in=7776000&refresh_token=BDBB2042F46BA3862C159AFAFF4C2B63
@@ -107,7 +106,7 @@ public class IndexController {
         map.put("openid",openid);
         String info = restTemplate.getForObject("https://graph.qq.com/user/get_user_info?access_token={access_token}&oauth_consumer_key={client_id}&openid={openid}", String.class, map);
         System.out.println();
-         */
+
         return "back";
     }
 
