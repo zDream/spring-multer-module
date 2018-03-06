@@ -86,7 +86,7 @@ public class IndexController {
             String[] split1 = s.split("=");
             token.put(split1[0],split1[1]);
         }
-        System.out.println("");
+        System.out.println("测试");
 
         //获取openid
         String open_id = restTemplate.getForObject("https://graph.qq.com/oauth2.0/me?access_token={access_token}", String.class, token.get("access_token"));
