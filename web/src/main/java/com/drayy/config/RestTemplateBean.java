@@ -10,6 +10,7 @@ public class RestTemplateBean {
     @Bean
     public RestTemplate createRestTemplate(){
         RestTemplate restTemplate = new RestTemplate();
+        restTemplate.getMessageConverters().add(new WxMappingJackson2HttpMessageConverter());
         return restTemplate;
     }
 }
